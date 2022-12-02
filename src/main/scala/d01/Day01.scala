@@ -14,29 +14,28 @@ object Day01 {
 
   @tailrec
   private def rec(elves: List[Elf], remainingLines: List[String]): List[Elf] =
-    remainingLines match
+    remainingLines match {
       case Nil => elves
       case a :: tail if a.isBlank => rec(elves, tail)
       case x => rec(Elf(x.takeWhile(!_.isBlank).map(_.toInt)) :: elves, x.dropWhile(!_.isBlank))
+    }
 
   lazy val myElves: List[Elf] =
     rec (Nil, myInput.getLines.toList)
 }
 
-object Part1 {
+object Part1 extends App {
 
   def result(elves: List[Elf]): Int =
     elves.map(_.total).max
 
-  @main def runPart1(): Unit =
-    println(result(Day01.myElves))
+  println(result(Day01.myElves))
 }
 
-object Part2 {
+object Part2 extends App {
 
   def result(elves: List[Elf]): Int =
     elves.map(_.total).sorted.takeRight(3).sum
 
-  @main def runPart2(): Unit =
-    println(result(Day01.myElves))
+  println(result(Day01.myElves))
 }
