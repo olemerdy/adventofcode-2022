@@ -9,7 +9,7 @@ case class Elf(caloriesList: List[Int]) {
 }
 
 object Day01 {
-  def myInput: Source =
+  private def myInput: Source =
     Source.fromURL(getClass.getResource("input.txt"))
 
   @tailrec

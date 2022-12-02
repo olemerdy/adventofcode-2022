@@ -22,7 +22,7 @@ class Part1Spec extends AnyFlatSpec with should.Matchers {
 
   val inputResult = 67016
 
-  "My input" should s"have $inputResult measurements larger than the previous" in {
+  "My input" should s"have part 1 result of $inputResult calories" in {
     Part1.result(Day01.myElves) shouldBe inputResult
   }
 
@@ -38,7 +38,7 @@ class Part2Spec extends AnyFlatSpec with should.Matchers {
 
   val expected = 200116
 
-  "My input" should s"have a part 2 result of $expected" in {
+  "My input" should s"have a part 2 result of $expected calories" in {
     Part2.result(Day01.myElves) shouldBe expected
   }
 }

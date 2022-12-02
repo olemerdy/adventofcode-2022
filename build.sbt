@@ -6,6 +6,5 @@ ThisBuild / libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.10" % T
 
 lazy val root = (project in file("."))
   .settings(
-    name := "adventofcode-2022",
-    idePackagePrefix := Some("org.lafeuille.adventofcode.y2022")
+    name := "adventofcode-2022"
   )
